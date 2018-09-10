@@ -74,7 +74,7 @@ headers:
 }
 ```
 ## 员工基本信息 9/10
-### 链接: POST    /users
+### 链接: POST    /employees
 #### 参数
 ```
 string :name  #名称
@@ -114,7 +114,7 @@ string :labor_contract_pic #劳动合同
 
 ```
 ## 带队人员列表 9/10
-### 链接: GET    /users/recruiter_users
+### 链接: GET    /employees/recruiter_users
 #### 参数
 ```
 ```
