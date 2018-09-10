@@ -113,7 +113,7 @@ string :labor_contract_pic #劳动合同
 }
 
 ```
-## 员工基本信息 9/10
+## 带队人员列表 9/10
 ### 链接: GET    /users/recruiter_users
 #### 参数
 ```
