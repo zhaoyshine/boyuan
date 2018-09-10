@@ -23,10 +23,11 @@ headers:
 #### 返回值
 ```
 {
-    "token": "eyJhbGciOiJub25lIn0.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MzYzMTQzMzF9."
+    "code": 0,
+    "message": "ok"
 }
 ```
-## 获取角色
+## 获取角色 9/10
 ### 链接: GET    /roles
 #### 参数
 ```
@@ -49,7 +50,7 @@ headers:
     ]
 }
 ```
-## 获取民族
+## 获取民族 9/10
 ### 链接: GET    /nations
 #### 参数
 ```
@@ -72,3 +73,44 @@ headers:
     ]
 }
 ```
+## 员工基本信息 9/10
+### 链接: POST    /users
+#### 参数
+```
+string :name  #名称
+integer :gender #性别
+integer :nation_id #民族
+string :id_card_number #身份证号码
+datetime :birthdate #出生日期
+string :domicile_place #户籍所在地
+string :tel #练习电话
+string :contact_address #联系地址
+integer :company_id #当前单位
+integer :wil_go_company_id #调往单位
+integer :insurance_id #保险
+integer :recruitment_project_id #招聘项目
+integer :recruiter_id #招聘专员类型
+integer :recruiter_user_id #招聘专员
+datetime :dispatch_at #派遣时间
+datetime :contract_start_date #合同开始时间
+datetime :contract_end_date #合同结束时间
+integer :contract_id #合同类型
+string :accumulation_fund #公积金
+string :accumulation_fund_number #公积金账户
+string :bank_of_deposit #开户行
+string :bank_card_number #银行卡号
+boolean :work_type #员工状态
+
+string :id_card_pic #身份证照片
+string :bank_card_pic #银行卡照片
+string :labor_contract_pic #劳动合同
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+
+```
+
