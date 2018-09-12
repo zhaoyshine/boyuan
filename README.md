@@ -196,3 +196,302 @@ string :labor_contract_pic #劳动合同
     ]
 }
 ```
+
+## 创建单位协议 9/12
+### 链接: POST   /agreements
+#### 参数
+```
+integer :organization_id #单位名称
+integer :customer_person_id #客服专员
+datetime :sign_time #协议签订时间
+datetime :file_start #协议时期
+datetime :file_end #协议结束
+string :file_last #合同期限
+text :file_content #协议内容
+text :extra_content #协议内容
+
+string :file, array: true #相关附件
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 更新单位协议 9/12
+### 链接: PATCH   /agreements/:id
+#### 参数
+```
+:id: agreement_id
+integer :organization_id #单位名称
+integer :customer_person_id #客服专员
+datetime :sign_time #协议签订时间
+datetime :file_start #协议时期
+datetime :file_end #协议结束
+string :file_last #合同期限
+text :file_content #协议内容
+text :extra_content #协议内容
+
+string :file, array: true #相关附件
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 单位协议列表 9/12
+### 链接: GET    /agreements
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+## 单位协议详细信息 9/12
+### 链接: GET    /agreements/:id
+#### 参数
+```
+:id:agreement_id
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": "agreement info..."
+}
+
+```
+
+## 创建单位 9/12
+### 链接: POST   /organizations
+#### 参数
+```
+string :company_name #单位名称 
+integer :contract_id #服务类型
+integer :customer_person_id #客服专员
+string :company_type #公司性质
+string :work_type #公司性质
+string :company_size #企业规模
+string :company_address #企业地址
+string :lawer_person #法人代表
+string :lawer_contact #联系方式
+string :specile_person #专事联系人
+string :specile_contact #联系方式
+integer :role_id #所属部门
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 更新单位 9/12
+### 链接: PATCH   /organizations/:id
+#### 参数
+```
+:id: organization_id
+string :company_name #单位名称 
+integer :contract_id #服务类型
+integer :customer_person_id #客服专员
+string :company_type #公司性质
+string :work_type #公司性质
+string :company_size #企业规模
+string :company_address #企业地址
+string :lawer_person #法人代表
+string :lawer_contact #联系方式
+string :specile_person #专事联系人
+string :specile_contact #联系方式
+integer :role_id #所属部门
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 单位列表 9/12
+### 链接: GET    /organizations
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+## 单位详细信息 9/12
+### 链接: GET    /organizations/:id
+#### 参数
+```
+:id:organization_id
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": "organization info..."
+}
+
+```
+
+
+## 创建招聘项目 9/12
+### 链接: POST   /recruitment_projects
+#### 参数
+```
+integer :organization_id #单位名称
+string :name #招聘主题
+string :recruiting_numbers #招聘人数
+string :treatment_hour #每小时的待遇
+string :age_range #年龄要求
+string :gender_requirement #性别要求
+integer :contract_id #服务类型
+string :position_statement #岗位职责
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 更新招聘项目 9/12
+### 链接: PATCH   /recruitment_projects/:id
+#### 参数
+```
+:id: recruitment_project_id
+integer :organization_id #单位名称
+string :name #招聘主题
+string :recruiting_numbers #招聘人数
+string :treatment_hour #每小时的待遇
+string :age_range #年龄要求
+string :gender_requirement #性别要求
+integer :contract_id #服务类型
+string :position_statement #岗位职责
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 招聘项目列表 9/12
+### 链接: GET    /recruitment_projects
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+## 招聘项目详细信息 9/12
+### 链接: GET    /recruitment_projects/:id
+#### 参数
+```
+:id:recruitment_project_id
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": "recruitment project info..."
+}
+
+```
+
+
+## 创建系统用户 9/12
+### 链接: POST   /users
+#### 参数
+```
+:name
+:tel
+:role_id
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 更新系统用户 9/12
+### 链接: PATCH   /users/:id
+#### 参数
+```
+:id: user_id
+:name
+:tel
+:role_id
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 系统用户重置密码 9/12
+### 链接: POST   /users/reset_pwd
+#### 参数
+```
+:tel
+:password 用户密码
+:password_new 新密码
+:password_new_confirmation 确认密码
+```
+#### 返回值
+```
+{code: 0, message: "ok"}
+```
+
+## 用户未读消息 9/12
+### 链接: POST   /users/unread_count
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "count": "0"
+}
+```
