@@ -73,7 +73,7 @@ headers:
     ]
 }
 ```
-## 员工基本信息 9/10
+## 员工基本信息 9/14
 ### 链接: POST    /employees
 #### 参数
 ```
@@ -101,9 +101,9 @@ string :bank_of_deposit #开户行
 string :bank_card_number #银行卡号
 boolean :work_type #员工状态
 
-string :id_card_pic #身份证照片
-string :bank_card_pic #银行卡照片
-string :labor_contract_pic #劳动合同
+string :id_card_pic, array: true #身份证照片
+string :bank_card_pic, array: true #银行卡照片
+string :labor_contract_pic, array: true #劳动合同
 ```
 #### 返回值
 ```
@@ -113,7 +113,7 @@ string :labor_contract_pic #劳动合同
 }
 
 ```
-## 带队人员列表 9/10
+## 带队人员列表 9/14
 ### 链接: GET    /employees/recruiter_users
 #### 参数
 ```
@@ -122,10 +122,42 @@ string :labor_contract_pic #劳动合同
 ```
 {
     "code": 0,
-    "message": "ok"
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
 }
 
 ```
+
+
+## 带队人员下拉列表数据 9/14
+### 链接: GET   /employees/drop_down_lists
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": [
+        {
+            "id": 1,
+            "name": null,
+        }
+    ]
+}
+```
+
+
 ## 获取合同类型 9/10
 ### 链接: GET    /contracts
 #### 参数
@@ -493,5 +525,126 @@ string :position_statement #岗位职责
 {
     "code": "0",
     "count": "0"
+}
+```
+
+
+## 单位下拉列表数据 9/14
+### 链接: GET   /organizations/drop_down_lists
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": [
+        {
+            "id": 1,
+            "company_num": null,
+            "company_name": "上海穆际"
+        }
+    ]
+}
+```
+
+## 招聘项目下拉列表数据 9/14
+### 链接: GET   /recruitment_projects/drop_down_lists
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": [
+        {
+            "id": 1,
+            "name": "",
+        }
+    ]
+}
+```
+
+## 员工续签合同 9/14
+### 链接: POST   /employees/renew_contract
+#### 参数
+```
+employee_id
+contract_start_date
+contract_end_date
+string :labor_contract_pic, array: true #劳动合同
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 员工内部流转 9/14
+### 链接: POST   /employees/interior_circulation
+#### 参数
+```
+employee_id 
+wil_go_company_id #调往的单位
+remark
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 内部流转列表 9/14
+### 链接: GET   /interior_circulations
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 创建带队人员 9/14
+### 链接: POST   /employees/recruiter
+#### 参数
+```
+string :name  #名称
+string :gender  #性别
+string :id_card_number #身份证号码
+string :tel #练习电话
+integer :recruiter_id #招聘专员类型
+string :bank_of_deposit #开户行
+string :bank_card_number #银行卡号
+
+string :id_card_pic, array: true #身份证照片
+string :bank_card_pic, array: true #银行卡照片
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
 }
 ```
