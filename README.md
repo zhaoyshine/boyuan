@@ -648,3 +648,45 @@ string :bank_card_pic, array: true #银行卡照片
     "message": "ok"
 }
 ```
+
+
+## 客户总数 9/14
+### 链接: GET   /statistic/organizations_count
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "count": "0"
+}
+```
+
+
+## 员工总数 9/14
+### 链接: GET   /statistic/employees_count
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "count": "0"
+}
+```
+
+
+## 在职员工总数 9/14
+### 链接: GET   /statistic/active_employees_count
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "count": "0"
+}
+```
