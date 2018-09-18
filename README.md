@@ -1,4 +1,12 @@
 # 文档
+
+## 炫酷的锚点
+- [登录](#登录)
+- [获取用户列表](#获取用户列表)
+- [获取民族](#获取民族)
+- [在职员工总数](#在职员工总数)
+- [系统人员下拉列表数据](#系统人员下拉列表数据)
+
 ## 登录
 ### 链接: POST   /authentication
 #### 参数
@@ -27,7 +35,7 @@ headers:
     "message": "ok"
 }
 ```
-## 获取角色 9/10
+## 获取角色
 ### 链接: GET    /roles
 #### 参数
 ```
@@ -50,7 +58,7 @@ headers:
     ]
 }
 ```
-## 获取民族 9/10
+## 获取民族
 ### 链接: GET    /nations
 #### 参数
 ```
@@ -73,7 +81,7 @@ headers:
     ]
 }
 ```
-## 员工基本信息 9/14
+## 员工基本信息
 ### 链接: POST    /employees
 #### 参数
 ```
@@ -113,7 +121,7 @@ string :labor_contract_pic, array: true #劳动合同
 }
 
 ```
-## 带队人员列表 9/14
+## 带队人员列表
 ### 链接: GET    /employees/recruiter_users
 #### 参数
 ```
@@ -139,7 +147,7 @@ string :labor_contract_pic, array: true #劳动合同
 ```
 
 
-## 带队人员下拉列表数据 9/14
+## 带队人员下拉列表数据
 ### 链接: GET   /employees/drop_down_lists
 #### 参数
 ```
@@ -158,7 +166,7 @@ string :labor_contract_pic, array: true #劳动合同
 ```
 
 
-## 获取合同类型 9/10
+## 获取合同类型
 ### 链接: GET    /contracts
 #### 参数
 ```
@@ -181,7 +189,7 @@ string :labor_contract_pic, array: true #劳动合同
     ]
 }
 ```
-## 获取保险类型 9/10
+## 获取保险类型
 ### 链接: GET    /insurances
 #### 参数
 ```
@@ -205,7 +213,7 @@ string :labor_contract_pic, array: true #劳动合同
 }
 ```
 
-## 获取招聘专员类型 9/10
+## 获取招聘专员类型
 ### 链接: GET    /recruiters
 #### 参数
 ```
@@ -229,7 +237,7 @@ string :labor_contract_pic, array: true #劳动合同
 }
 ```
 
-## 创建单位协议 9/12
+## 创建单位协议
 ### 链接: POST   /agreements
 #### 参数
 ```
@@ -249,7 +257,7 @@ string :file, array: true #相关附件
 {code: 0, message: "ok"}
 ```
 
-## 更新单位协议 9/12
+## 更新单位协议
 ### 链接: PATCH   /agreements/:id
 #### 参数
 ```
@@ -270,7 +278,7 @@ string :file, array: true #相关附件
 {code: 0, message: "ok"}
 ```
 
-## 单位协议列表 9/12
+## 单位协议列表
 ### 链接: GET    /agreements
 #### 参数
 ```
@@ -295,7 +303,7 @@ string :file, array: true #相关附件
 
 ```
 
-## 单位协议详细信息 9/12
+## 单位协议详细信息
 ### 链接: GET    /agreements/:id
 #### 参数
 ```
@@ -310,7 +318,7 @@ string :file, array: true #相关附件
 
 ```
 
-## 创建单位 9/12
+## 创建单位
 ### 链接: POST   /organizations
 #### 参数
 ```
@@ -332,7 +340,7 @@ integer :role_id #所属部门
 {code: 0, message: "ok"}
 ```
 
-## 更新单位 9/12
+## 更新单位
 ### 链接: PATCH   /organizations/:id
 #### 参数
 ```
@@ -355,7 +363,7 @@ integer :role_id #所属部门
 {code: 0, message: "ok"}
 ```
 
-## 单位列表 9/12
+## 单位列表
 ### 链接: GET    /organizations
 #### 参数
 ```
@@ -380,7 +388,7 @@ integer :role_id #所属部门
 
 ```
 
-## 单位详细信息 9/12
+## 单位详细信息
 ### 链接: GET    /organizations/:id
 #### 参数
 ```
@@ -396,7 +404,7 @@ integer :role_id #所属部门
 ```
 
 
-## 创建招聘项目 9/12
+## 创建招聘项目
 ### 链接: POST   /recruitment_projects
 #### 参数
 ```
@@ -414,7 +422,7 @@ string :position_statement #岗位职责
 {code: 0, message: "ok"}
 ```
 
-## 更新招聘项目 9/12
+## 更新招聘项目
 ### 链接: PATCH   /recruitment_projects/:id
 #### 参数
 ```
@@ -433,7 +441,7 @@ string :position_statement #岗位职责
 {code: 0, message: "ok"}
 ```
 
-## 招聘项目列表 9/12
+## 招聘项目列表
 ### 链接: GET    /recruitment_projects
 #### 参数
 ```
@@ -458,7 +466,7 @@ string :position_statement #岗位职责
 
 ```
 
-## 招聘项目详细信息 9/12
+## 招聘项目详细信息
 ### 链接: GET    /recruitment_projects/:id
 #### 参数
 ```
@@ -474,7 +482,7 @@ string :position_statement #岗位职责
 ```
 
 
-## 创建系统用户 9/12
+## 创建系统用户
 ### 链接: POST   /users
 #### 参数
 ```
@@ -487,7 +495,7 @@ string :position_statement #岗位职责
 {code: 0, message: "ok"}
 ```
 
-## 更新系统用户 9/12
+## 更新系统用户
 ### 链接: PATCH   /users/:id
 #### 参数
 ```
@@ -501,7 +509,7 @@ string :position_statement #岗位职责
 {code: 0, message: "ok"}
 ```
 
-## 系统用户重置密码 9/12
+## 系统用户重置密码
 ### 链接: POST   /users/reset_pwd
 #### 参数
 ```
@@ -515,7 +523,7 @@ string :position_statement #岗位职责
 {code: 0, message: "ok"}
 ```
 
-## 用户未读消息 9/12
+## 用户未读消息
 ### 链接: POST   /users/unread_count
 #### 参数
 ```
@@ -529,7 +537,7 @@ string :position_statement #岗位职责
 ```
 
 
-## 单位下拉列表数据 9/14
+## 单位下拉列表数据
 ### 链接: GET   /organizations/drop_down_lists
 #### 参数
 ```
@@ -548,7 +556,7 @@ string :position_statement #岗位职责
 }
 ```
 
-## 招聘项目下拉列表数据 9/14
+## 招聘项目下拉列表数据
 ### 链接: GET   /recruitment_projects/drop_down_lists
 #### 参数
 ```
@@ -566,7 +574,7 @@ string :position_statement #岗位职责
 }
 ```
 
-## 员工续签合同 9/14
+## 员工续签合同
 ### 链接: POST   /employees/renew_contract
 #### 参数
 ```
@@ -584,7 +592,7 @@ string :labor_contract_pic, array: true #劳动合同
 ```
 
 
-## 员工内部流转 9/14
+## 员工内部流转
 ### 链接: POST   /employees/interior_circulation
 #### 参数
 ```
@@ -601,7 +609,7 @@ remark
 ```
 
 
-## 内部流转列表 9/14
+## 内部流转列表
 ### 链接: GET   /interior_circulations
 #### 参数
 ```
@@ -626,7 +634,7 @@ remark
 ```
 
 
-## 创建带队人员 9/14
+## 创建带队人员
 ### 链接: POST   /employees/recruiter
 #### 参数
 ```
@@ -650,7 +658,7 @@ string :bank_card_pic, array: true #银行卡照片
 ```
 
 
-## 客户总数 9/14
+## 客户总数
 ### 链接: GET   /statistic/organizations_count
 #### 参数
 ```
@@ -664,7 +672,7 @@ string :bank_card_pic, array: true #银行卡照片
 ```
 
 
-## 员工总数 9/14
+## 员工总数
 ### 链接: GET   /statistic/employees_count
 #### 参数
 ```
@@ -678,7 +686,7 @@ string :bank_card_pic, array: true #银行卡照片
 ```
 
 
-## 在职员工总数 9/14
+## 在职员工总数
 ### 链接: GET   /statistic/active_employees_count
 #### 参数
 ```
@@ -688,5 +696,25 @@ string :bank_card_pic, array: true #银行卡照片
 {
     "code": 0,
     "count": "0"
+}
+```
+
+
+## 系统人员下拉列表数据
+### 链接: GET   /users/drop_down_lists
+#### 参数
+```
+role_id 
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": [
+        {
+            "id": 1,
+            "name": null,
+        }
+    ]
 }
 ```
