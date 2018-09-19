@@ -2,6 +2,15 @@
 
 ## 炫酷的锚点
 - [员工列表](#员工列表)
+- [系统员工列表](#系统员工列表)
+- [薪资项目列表](#薪资项目列表)
+- [薪资项目下拉列表](#薪资项目下拉列表)
+- [创建薪资项目](#创建薪资项目)
+- [更新薪资项目](#更新薪资项目)
+- [企业工资列表](#企业工资列表)
+- [创建企业工资](#创建企业工资)
+- [更新企业工资](#更新企业工资)
+
 
 
 ## 登录
@@ -18,20 +27,7 @@ body:
     "token": "eyJhbGciOiJub25lIn0.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MzYzMTQzMzF9."
 }
 ```
-## 获取用户列表
-### 链接: GET    /users
-#### 参数
-```
-headers:
-"Authorization":"eyJhbGciOiJub25lIn0.eyJ1c2VyX2lkIjoxLCJleHAiOjE1MzYzMTQzMzF9."
-```
-#### 返回值
-```
-{
-    "code": 0,
-    "message": "ok"
-}
-```
+
 ## 获取角色
 ### 链接: GET    /roles
 #### 参数
@@ -738,5 +734,168 @@ role_id
             "total_length": 0
         }
     }
+}
+```
+
+## 系统员工列表
+### 链接: GET    /users
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 薪资项目列表
+### 链接: GET    /salary_projects
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": []
+}
+```
+
+## 薪资项目下拉列表
+### 链接: GET    /salary_projects/drop_down_lists
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+
+## 创建薪资项目
+### 链接: POST   /salary_projects
+#### 参数
+```
+integer :user_id
+integer :weight #权重 从大到小排序
+string :mark
+string :name
+boolean :add_type #加减项目
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 更新薪资项目
+### 链接: PATCH   /salary_projects/:id
+#### 参数
+```
+integer :user_id
+integer :weight #权重 从大到小排序
+string :mark
+string :name
+boolean :add_type #加减项目
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 企业工资列表
+### 链接: GET    /payrolls
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+
+## 创建企业工资
+### 链接: POST   /payrolls
+#### 参数
+```
+integer :organization_id
+integer :recruitment_project_id
+string :sheet, array: true #表格
+string :calculation #计算方式
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 更新企业工资
+### 链接: PATCH   /payrolls/:id
+#### 参数
+```
+integer :organization_id
+integer :recruitment_project_id
+string :sheet, array: true #表格
+string :calculation #计算方式
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
 }
 ```
