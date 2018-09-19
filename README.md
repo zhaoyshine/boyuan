@@ -1,11 +1,8 @@
 # 文档
 
 ## 炫酷的锚点
-- [登录](#登录)
-- [获取用户列表](#获取用户列表)
-- [获取民族](#获取民族)
-- [在职员工总数](#在职员工总数)
-- [系统人员下拉列表数据](#系统人员下拉列表数据)
+- [员工列表](#员工列表)
+
 
 ## 登录
 ### 链接: POST   /authentication
@@ -716,5 +713,30 @@ role_id
             "name": null,
         }
     ]
+}
+```
+
+
+## 员工列表
+### 链接: GET   /employees
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
 }
 ```
