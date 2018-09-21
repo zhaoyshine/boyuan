@@ -13,8 +13,10 @@
 - [社保新增人员](#社保新增人员)
 - [公司人员列表](#公司人员列表)
 - [公司人员下拉列表数据](#公司人员下拉列表数据)
-
-
+- [购买社保](#购买社保)
+- [在保人员列表](#在保人员列表)
+- [停保人员列表](#停保人员列表)
+- [人员停保操作](#人员停保操作)
 
 
 ## 登录
@@ -100,7 +102,6 @@ datetime :dispatch_at #派遣时间
 datetime :contract_start_date #合同开始时间
 datetime :contract_end_date #合同结束时间
 integer :contract_id #合同类型
-string :accumulation_fund #公积金
 string :accumulation_fund_number #公积金账户
 string :bank_of_deposit #开户行
 string :bank_card_number #银行卡号
@@ -934,6 +935,7 @@ string :calculation #计算方式
 ### 链接: GET    /employees/organization_users
 #### 参数
 ```
+organization_id
 ```
 #### 返回值
 ```
@@ -960,6 +962,7 @@ string :calculation #计算方式
 ### 链接: GET   /employees/organization_user_drop_down_lists
 #### 参数
 ```
+organization_id
 ```
 #### 返回值
 ```
@@ -971,5 +974,87 @@ string :calculation #计算方式
             "name": null,
         }
     ]
+}
+```
+
+
+## 购买社保
+### 链接: POST   /insurances/buy_insurances
+#### 参数
+```
+integer :employee_id
+string :insurance_platform
+string :insurance_company
+datetime :insurance_buy_date
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 在保人员列表
+### 链接: GET    /employees/exist_insurances
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+## 停保人员列表
+### 链接: GET    /employees/stop_insurances
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 人员停保操作
+### 链接: POST   /insurances/stop_insurance_employees
+#### 参数
+```
+integer :employee_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
 }
 ```
