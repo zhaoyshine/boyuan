@@ -17,6 +17,9 @@
 - [在保人员列表](#在保人员列表)
 - [停保人员列表](#停保人员列表)
 - [人员停保操作](#人员停保操作)
+- [社保变更记录](#社保变更记录)
+- [社保缴费记录](#社保缴费记录)
+- [社保变更](#社保变更)
 
 
 ## 登录
@@ -1050,6 +1053,71 @@ datetime :insurance_buy_date
 #### 参数
 ```
 integer :employee_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+## 社保变更记录
+### 链接: GET    /insurances/change_insurance_record
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 社保缴费记录
+### 链接: GET    /insurances/payment_insurance_record
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 社保变更
+### 链接: POST    /insurances/change_insurances
+#### 参数
+```
+employee_id
+to_employee_id
 ```
 #### 返回值
 ```
