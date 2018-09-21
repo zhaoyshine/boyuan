@@ -10,6 +10,10 @@
 - [企业工资列表](#企业工资列表)
 - [创建企业工资](#创建企业工资)
 - [更新企业工资](#更新企业工资)
+- [社保新增人员](#社保新增人员)
+- [公司人员列表](#公司人员列表)
+- [公司人员下拉列表数据](#公司人员下拉列表数据)
+
 
 
 
@@ -897,5 +901,75 @@ string :calculation #计算方式
 {
     "code": 0,
     "message": "ok"
+}
+```
+
+
+## 社保新增人员
+### 链接: GET    /insurances/new_insurances
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 公司人员列表
+### 链接: GET    /employees/organization_users
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+
+## 公司人员下拉列表数据
+### 链接: GET   /employees/organization_user_drop_down_lists
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": "0",
+    "data": [
+        {
+            "id": 1,
+            "name": null,
+        }
+    ]
 }
 ```
