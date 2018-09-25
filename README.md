@@ -24,7 +24,7 @@
 - [未读消息](#未读消息)
 - [设置未读消息成为已读](#设置未读消息成为已读)
 - [删除消息](#删除消息)
-
+- [招聘项目人员列表](#招聘项目人员列表)
 
 
 ## 登录
@@ -1212,3 +1212,32 @@ ids, array: true
     "message": "ok"
 }
 ```
+
+
+## 招聘项目人员列表
+### 链接: GET    /employees/recruitment_project_users
+#### 参数
+```
+recruitment_project_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+
