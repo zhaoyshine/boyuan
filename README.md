@@ -20,6 +20,11 @@
 - [社保变更记录](#社保变更记录)
 - [社保缴费记录](#社保缴费记录)
 - [社保变更](#社保变更)
+- [已读消息](#已读消息)
+- [未读消息](#未读消息)
+- [设置未读消息成为已读](#设置未读消息成为已读)
+- [删除消息](#删除消息)
+
 
 
 ## 登录
@@ -1118,6 +1123,87 @@ integer :employee_id
 ```
 employee_id
 to_employee_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 已读消息
+### 链接: GET    /notifications/read
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 未读消息
+### 链接: GET    /notifications/unread
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+
+## 设置未读消息成为已读
+### 链接: POST    /notifications/clean
+#### 参数
+```
+ids, array: true
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 删除消息
+### 链接: DELETE    /notifications/destroy_ids
+#### 参数
+```
+ids, array: true
 ```
 #### 返回值
 ```
