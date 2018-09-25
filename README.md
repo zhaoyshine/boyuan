@@ -26,6 +26,10 @@
 - [删除消息](#删除消息)
 - [招聘项目人员列表](#招聘项目人员列表)
 - [批量导入公司](#批量导入公司)
+- [七牛js-sdk上传文件获取token接口](#七牛js-sdk上传文件获取token接口)
+- [七牛js-sdk下载文件获取token接口](#七牛js-sdk下载文件获取token接口)
+- [公司获取招聘项目列表](#公司获取招聘项目列表)
+- [公司获取招聘项目下拉列表](#公司获取招聘项目下拉列表)
 
 
 
@@ -375,6 +379,11 @@ integer :role_id #所属部门
 ### 链接: GET    /organizations
 #### 参数
 ```
+optional! :company_name
+optional! :customer_person_id
+optional! :company_type
+optional! :work_type
+optional! :company_size
 ```
 #### 返回值
 ```
@@ -946,6 +955,8 @@ string :calculation #计算方式
 #### 参数
 ```
 organization_id
+optional! :state, values: %w[在职 离职]
+optional! :insurance_id
 ```
 #### 返回值
 ```
@@ -1221,6 +1232,8 @@ ids, array: true
 #### 参数
 ```
 recruitment_project_id
+optional! :state, values: %w[在职 离职]
+optional! :insurance_id
 ```
 #### 返回值
 ```
@@ -1259,3 +1272,75 @@ file
 ```
 
 
+## 七牛js-sdk上传文件获取token接口
+### 链接: GET    /token
+#### 参数
+```
+```
+#### 返回值
+```
+```
+
+
+## 七牛js-sdk下载文件获取token接口
+### 链接: POST    /downtoken
+#### 参数
+```
+```
+#### 返回值
+```
+```
+
+
+
+## 公司获取招聘项目列表
+### 链接: GET    /recruitment_projects/by_organization
+#### 参数
+```
+organization_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
+
+## 公司获取招聘项目下拉列表
+### 链接: GET    /recruitment_projects/by_organization_drop_down_lists
+#### 参数
+```
+organization_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+
+```
