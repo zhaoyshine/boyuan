@@ -34,8 +34,12 @@
 - [更新员工基本信息](#更新员工基本信息)
 - [人员离职操作](#人员离职操作)
 - [更新带队人员](#更新带队人员)
-
-
+- [更新带队人员](#更新带队人员)
+- [材料列表](#材料列表)
+- [材料用途](#材料用途)
+- [新建材料](#新建材料)
+- [更新材料](#更新材料)
+- [带队人员的员工列表](#带队人员的员工列表)
 
 ## 登录
 ### 链接: POST   /authentication
@@ -1454,8 +1458,6 @@ file
 
 ```
 
-
-
 ## 材料列表
 ### 链接: GET    /pans
 #### 参数
@@ -1537,5 +1539,33 @@ string :file, array: true
 ```
 
 
-
-
+## 带队人员的员工列表
+### 链接: GET   /employees/recruiter_user_employees
+#### 参数
+```
+requires! :recruiter_user_id
+optional! :gender
+optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
