@@ -30,6 +30,8 @@
 - [七牛js-sdk下载文件获取token接口](#七牛js-sdk下载文件获取token接口)
 - [公司获取招聘项目列表](#公司获取招聘项目列表)
 - [公司获取招聘项目下拉列表](#公司获取招聘项目下拉列表)
+- [批量导入公司](#批量导入公司)
+- [更新员工基本信息](#更新员工基本信息)
 
 
 
@@ -957,6 +959,7 @@ string :calculation #计算方式
 organization_id
 optional! :state, values: %w[在职 离职]
 optional! :insurance_id
+optional! :recruitment_project_id
 ```
 #### 返回值
 ```
@@ -1257,7 +1260,7 @@ optional! :insurance_id
 
 
 ## 批量导入公司
-### 链接: GET    /organizations/add_organizations
+### 链接: POST    /organizations/add_organizations
 #### 参数
 ```
 file
@@ -1341,6 +1344,63 @@ organization_id
             "total_length": 0
         }
     }
+}
+
+```
+
+## 更新员工基本信息
+### 链接: PATCH    /employees/:id
+#### 参数
+```
+string :name  #名称
+integer :gender #性别
+integer :nation_id #民族
+string :id_card_number #身份证号码
+datetime :birthdate #出生日期
+string :domicile_place #户籍所在地
+string :tel #练习电话
+string :contact_address #联系地址
+integer :company_id #当前单位
+integer :wil_go_company_id #调往单位
+integer :insurance_id #保险
+integer :recruitment_project_id #招聘项目
+integer :recruiter_id #招聘专员类型
+integer :recruiter_user_id #招聘专员
+datetime :dispatch_at #派遣时间
+datetime :contract_start_date #合同开始时间
+datetime :contract_end_date #合同结束时间
+integer :contract_id #合同类型
+string :accumulation_fund_number #公积金账户
+string :bank_of_deposit #开户行
+string :bank_card_number #银行卡号
+boolean :work_type #员工状态
+
+string :id_card_pic, array: true #身份证照片
+string :bank_card_pic, array: true #银行卡照片
+string :labor_contract_pic, array: true #劳动合同
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+
+```
+
+
+
+## 批量导入员工
+### 链接: POST    /employees/add_employees
+#### 参数
+```
+file
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
 }
 
 ```
