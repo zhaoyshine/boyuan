@@ -616,6 +616,7 @@ string :labor_contract_pic, array: true #劳动合同
 #### 参数
 ```
 employee_id 
+diao_wang_date #调往时间
 wil_go_company_id #调往的单位
 remark
 ```
@@ -632,6 +633,8 @@ remark
 ### 链接: GET   /interior_circulations
 #### 参数
 ```
+optional! :company_id
+optional! :wil_to_company_id
 ```
 #### 返回值
 ```
@@ -743,6 +746,12 @@ role_id
 ### 链接: GET   /employees
 #### 参数
 ```
+optional! :gender
+optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
 ```
 #### 返回值
 ```
@@ -824,8 +833,6 @@ role_id
     }
 }
 ```
-
-
 
 ## 创建薪资项目
 ### 链接: POST   /salary_projects
