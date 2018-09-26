@@ -1453,3 +1453,89 @@ file
 }
 
 ```
+
+
+
+## 材料列表
+### 链接: GET    /pans
+#### 参数
+```
+optional! :user_id
+optional! :usage
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 材料用途
+### 链接: GET    /pans/usage
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": []
+}
+```
+
+
+## 新建材料
+### 链接: POST    /pans
+#### 参数
+```
+string :name #名称
+integer :user_id #上传人
+string :usage #用途
+string :desc #描述
+string :file, array: true
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+
+```
+
+
+## 更新材料
+### 链接: PATCH    /pans/:id
+#### 参数
+```
+string :name #名称
+integer :user_id #上传人
+string :usage #用途
+string :desc #描述
+string :file, array: true
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+
+```
+
+
+
+
