@@ -32,6 +32,8 @@
 - [公司获取招聘项目下拉列表](#公司获取招聘项目下拉列表)
 - [批量导入公司](#批量导入公司)
 - [更新员工基本信息](#更新员工基本信息)
+- [人员离职操作](#人员离职操作)
+- [更新带队人员](#更新带队人员)
 
 
 
@@ -629,12 +631,27 @@ remark
 ```
 
 
+## 人员离职操作
+### 链接: POST   /employees/leave_office_employees
+#### 参数
+```
+integer :employee_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
 ## 内部流转列表
 ### 链接: GET   /interior_circulations
 #### 参数
 ```
 optional! :company_id
-optional! :wil_to_company_id
+optional! :wil_go_company_id
 ```
 #### 返回值
 ```
@@ -660,6 +677,31 @@ optional! :wil_to_company_id
 ### 链接: POST   /employees/recruiter
 #### 参数
 ```
+string :name  #名称
+string :gender  #性别
+string :id_card_number #身份证号码
+string :tel #练习电话
+integer :recruiter_id #招聘专员类型
+string :bank_of_deposit #开户行
+string :bank_card_number #银行卡号
+
+string :id_card_pic, array: true #身份证照片
+string :bank_card_pic, array: true #银行卡照片
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 更新带队人员
+### 链接: PATCH   /employees/recruiter_update
+#### 参数
+```
+id
 string :name  #名称
 string :gender  #性别
 string :id_card_number #身份证号码
