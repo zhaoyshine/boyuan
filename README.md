@@ -984,6 +984,12 @@ string :calculation #计算方式
 ### 链接: GET    /insurances/new_insurances
 #### 参数
 ```
+optional! :insurance_id
+optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
 ```
 #### 返回值
 ```
@@ -1074,9 +1080,15 @@ datetime :insurance_buy_date
 
 
 ## 在保人员列表
-### 链接: GET    /employees/exist_insurances
+### 链接: GET    /insurances/exist_insurances
 #### 参数
 ```
+optional! :insurance_id
+optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
 ```
 #### 返回值
 ```
@@ -1098,9 +1110,15 @@ datetime :insurance_buy_date
 ```
 
 ## 停保人员列表
-### 链接: GET    /employees/stop_insurances
+### 链接: GET    /insurances/stop_insurances
 #### 参数
 ```
+optional! :insurance_id
+optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
 ```
 #### 返回值
 ```
@@ -1140,6 +1158,9 @@ integer :employee_id
 ### 链接: GET    /insurances/change_insurance_record
 #### 参数
 ```
+optional! :organization_id
+optional! :insurance_id
+optional! :to_organization_id
 ```
 #### 返回值
 ```
@@ -1165,6 +1186,8 @@ integer :employee_id
 ### 链接: GET    /insurances/payment_insurance_record
 #### 参数
 ```
+optional! :organization_id
+optional! :insurance_id
 ```
 #### 返回值
 ```
