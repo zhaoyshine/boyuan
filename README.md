@@ -847,12 +847,25 @@ optional! :contract_state
 ### 链接: GET    /salary_projects
 #### 参数
 ```
+optional! :add_type
+optional! :user_id
 ```
 #### 返回值
 ```
 {
     "code": 0,
-    "data": []
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
 }
 ```
 
@@ -922,6 +935,8 @@ boolean :add_type #加减项目
 ### 链接: GET    /payrolls
 #### 参数
 ```
+optional! :organization_id
+optional! :recruitment_project_id
 ```
 #### 返回值
 ```
