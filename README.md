@@ -40,6 +40,7 @@
 - [新建材料](#新建材料)
 - [更新材料](#更新材料)
 - [带队人员的员工列表](#带队人员的员工列表)
+- [社保变更列表](#社保变更列表)
 
 ## 登录
 ### 链接: POST   /authentication
@@ -1584,6 +1585,35 @@ string :file, array: true
 requires! :recruiter_user_id
 optional! :gender
 optional! :state
+optional! :company_id
+optional! :contract_id
+optional! :recruiter_user_id
+optional! :contract_state
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+## 社保变更列表
+### 链接: GET   /insurances/should_be_changed_employee
+#### 参数
+```
 optional! :company_id
 optional! :contract_id
 optional! :recruiter_user_id
