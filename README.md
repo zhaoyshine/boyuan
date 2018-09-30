@@ -945,6 +945,7 @@ boolean :add_type #加减项目
 ```
 optional! :organization_id
 optional! :recruitment_project_id
+optional! :state
 ```
 #### 返回值
 ```
@@ -1647,7 +1648,7 @@ optional! :contract_state
 
 
 ## 企业工资表的人员列表
-### 链接: GET   /payroll/:id
+### 链接: GET   /payrolls/:id
 #### 参数
 ```
 ```
@@ -1673,7 +1674,7 @@ optional! :contract_state
 
 
 ## 企业工资表导出
-### 链接: GET   /payroll/export_excel
+### 链接: GET   /payrolls/export_excel
 #### 参数
 ```
 payroll_id
@@ -1681,6 +1682,22 @@ payroll_id
 #### 返回值
 ```
 
+```
+
+
+## 企业工资表导入
+### 链接: POST   /payrolls/import_excel
+#### 参数
+```
+payroll_id
+file
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
 ```
 
 
