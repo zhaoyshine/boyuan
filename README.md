@@ -1781,9 +1781,10 @@ file
 
 
 ## 删除单位协议
-### 链接: DELETE   /agreement/:id
+### 链接: DELETE   /agreement/0
 #### 参数
 ```
+ids
 ```
 #### 返回值
 ```
@@ -1796,9 +1797,10 @@ file
 
 
 ## 删除员工
-### 链接: DELETE   /employees/:id
+### 链接: DELETE   /employees/0
 #### 参数
 ```
+ids
 ```
 #### 返回值
 ```
@@ -1810,9 +1812,10 @@ file
 
 
 ## 删除单位
-### 链接: DELETE   /organizations/:id
+### 链接: DELETE   /organizations/0
 #### 参数
 ```
+ids
 ```
 #### 返回值
 ```
@@ -1824,9 +1827,10 @@ file
 
 
 ## 删除单位招聘项目
-### 链接: DELETE   /recruitment_projects/:id
+### 链接: DELETE   /recruitment_projects/0
 #### 参数
 ```
+ids
 ```
 #### 返回值
 ```
