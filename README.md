@@ -47,6 +47,17 @@
 - [企业工资表的人员列表](#企业工资表的人员列表)
 - [企业工资表导出](#企业工资表导出)
 - [企业工资表导入](#企业工资表导入)
+- [todo-员工](#todo-员工)
+- [todo-保险](#todo-保险)
+- [todo-薪资](#todo-薪资)
+- [todo-单位](#todo-单位)
+- [删除单位协议](#删除单位协议)
+- [删除员工](#删除员工)
+- [删除单位](#删除单位)
+- [删除单位招聘项目](#删除单位招聘项目)
+
+
+
 
 ## 登录
 ### 链接: POST   /authentication
@@ -1699,4 +1710,129 @@ file
 }
 ```
 
+
+
+## todo-员工
+### 链接: GET   /todos/employees
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0, 
+    "new_employees": [],
+    "update_employees": [],
+    "destroy_employees": [],
+    "employee_renew_contracts": [],
+    "employee_interior_circulations": [],
+    "employee_leave_offices": []
+}
+```
+
+## todo-保险
+### 链接: GET   /todos/insurances
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0, 
+    "employee_buy_insurances": [],
+    "employee_stop_insurances": []
+}
+```
+
+
+## todo-薪资
+### 链接: GET   /todos/payrolls
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    暂未写到
+}
+```
+
+
+## todo-单位
+### 链接: GET   /todos/payrolls
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0, 
+    "new_organizations": [],
+    "update_organizations": [],
+    "destroy_organizations": [],
+    "new_agreements": [],
+    "update_agreements": [],
+    "destroy_agreements": [],
+    "new_recruitment_projects": [],
+    "update_recruitment_projects": [],
+    "destroy_recruitment_projects": []
+}
+```
+
+
+## 删除单位协议
+### 链接: DELETE   /agreement/:id
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+
+## 删除员工
+### 链接: DELETE   /employees/:id
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 删除单位
+### 链接: DELETE   /organizations/:id
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 删除单位招聘项目
+### 链接: DELETE   /recruitment_projects/:id
+#### 参数
+```
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
 
