@@ -55,9 +55,14 @@
 - [删除员工](#删除员工)
 - [删除单位](#删除单位)
 - [删除单位招聘项目](#删除单位招聘项目)
-
-
-
+- [删除薪酬项目](#删除薪酬项目)
+- [删除企业工资表](#删除企业工资表)
+- [员工相关审核](#员工相关审核)
+- [企业相关审核](#企业相关审核)
+- [协议相关审核](#协议相关审核)
+- [招聘项目相关审核](#招聘项目相关审核)
+- [工资表相关审核](#工资表相关审核)
+- [薪资项目相关审核](#薪资项目相关审核)
 
 ## 登录
 ### 链接: POST   /authentication
@@ -1753,7 +1758,12 @@ file
 #### 返回值
 ```
 {
-    暂未写到
+    "code": "0", 
+    "new_salary_projects": [],
+    "salary_projects": [],
+    "salary_project_deletes": [],
+    "new_payrolls": [],
+    "payroll_deletes": [],
 }
 ```
 
@@ -1840,3 +1850,141 @@ ids
 }
 ```
 
+
+## 删除薪酬项目
+### 链接: DELETE   /salary_projects/0
+#### 参数
+```
+ids
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 删除企业工资表
+### 链接: DELETE   /payrolls/0
+#### 参数
+```
+ids
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 员工相关审核
+### 链接: POST   /todos/employees_audit
+#### 参数
+```
+id 员工id
+notify_type, values: %w[new update destroy renew_contract interior_circulation leave_office] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 企业相关审核
+### 链接: POST   /todos/organizations_audit
+#### 参数
+```
+id 企业id
+notify_type, values: %w[new update destroy ] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 协议相关审核
+### 链接: POST   /todos/agreements_audit
+#### 参数
+```
+id 企业id
+notify_type, values: %w[new update destroy ] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+
+## 招聘项目相关审核
+### 链接: POST   /todos/recruitment_projects_audit
+#### 参数
+```
+id 企业id
+notify_type, values: %w[new update destroy ] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 工资表相关审核
+### 链接: POST   /todos/payrolls_audit
+#### 参数
+```
+id 企业id
+notify_type, values: %w[new sheet destroy ] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
+
+
+## 薪资项目相关审核
+### 链接: POST   /todos/salary_projects_audit
+#### 参数
+```
+id 企业id
+notify_type, values: %w[new update destroy ] 审核的类型
+result, values: %w[true false] 审核结果
+audit_remark 审核不通过备注
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "message": "ok"
+}
+```
