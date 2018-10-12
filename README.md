@@ -73,6 +73,8 @@
 - [社保新增人员提醒](#社保新增人员提醒)
 - [社保离职人员提醒](#社保离职人员提醒)
 - [当月工资表未导入提醒](#当月工资表未导入提醒)
+- [我发起的](#我发起的)
+
 
 
 ## 登录
@@ -2152,3 +2154,48 @@ user_id
     "payrolls": [],
 }
 ```
+
+
+
+## 我发起的
+### 链接: GET    /idos/new_employees 
+### 链接: GET    /idos/update_employees 
+### 链接: GET    /idos/destroy_employees 
+### 链接: GET    /idos/employee_renew_contracts 
+### 链接: GET    /idos/payroll_sheets 
+### 链接: GET    /idos/payroll_deletes 
+### 链接: GET    /idos/new_organizations 
+### 链接: GET    /idos/update_organizations 
+### 链接: GET    /idos/destroy_organizations 
+### 链接: GET    /idos/new_agreements 
+### 链接: GET    /idos/update_agreements 
+### 链接: GET    /idos/destroy_agreements 
+### 链接: GET    /idos/new_recruitment_projects 
+### 链接: GET    /idos/update_recruitment_projects 
+### 链接: GET    /idos/destroy_recruitment_projects 
+#### 参数
+```
+user_id
+```
+#### 返回值
+```
+{
+    "code": 0,
+    "data": [],
+    "meta": {
+        "pagination": {
+            "total_pages": 0,
+            "current_page": 1,
+            "next_page": null,
+            "prev_page": null,
+            "first_page": true,
+            "last_page": false,
+            "total_length": 0
+        }
+    }
+}
+```
+
+
+
+    
