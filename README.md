@@ -1,6 +1,6 @@
 # 文档
 
-## 炫酷的锚点
+## 目录
 - [登录](#登录)
 - [获取角色](#获取角色)
 - [获取民族](#获取民族)
@@ -81,7 +81,6 @@
 ### 链接: POST   /authentication
 #### 参数
 ```
-body:
 "tel":"15000000000"
 "password":"15000000000"
 ```
@@ -1001,9 +1000,9 @@ optional! :state
 #### 参数
 ```
 integer :organization_id
-integer :recruitment_project_id
 string :sheet, array: true #表格
-string :calculation #计算方式
+datetime :start_date
+datetime :end_date
 ```
 #### 返回值
 ```
